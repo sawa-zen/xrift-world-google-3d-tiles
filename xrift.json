@@ -13,8 +13,12 @@
     "description": "Google 3D Tilesで再現された名古屋・鶴舞駅周辺の街並みを歩き回れるワールド",
     "thumbnailPath": "thumbnail.png",
     "buildCommand": "npm run build",
+    "camera": {
+      "near": 0.1,
+      "far": 5000
+    },
     "physics": {
-      "gravity": 1.62,
+      "gravity": 9.81,
       "allowInfiniteJump": true
     },
     "ignore": [

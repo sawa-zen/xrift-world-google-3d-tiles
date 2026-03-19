@@ -6,7 +6,7 @@
  */
 
 import { DevEnvironment, XRiftProvider } from '@xrift/world-components'
-import type { PhysicsConfig } from '@xrift/world-components'
+import type { CameraConfig, PhysicsConfig } from '@xrift/world-components'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { World } from './World'
@@ -19,10 +19,14 @@ const physicsConfig: PhysicsConfig | undefined = (
   xriftConfig as { physics?: PhysicsConfig }
 ).physics
 
+const cameraConfig: CameraConfig | undefined = (
+  xriftConfig as { camera?: CameraConfig }
+).camera
+
 createRoot(rootElement).render(
   <StrictMode>
     <XRiftProvider baseUrl="/">
-      <DevEnvironment physicsConfig={physicsConfig} spawnPosition={[0, 80, 0]} respawnThreshold={-50}>
+      <DevEnvironment physicsConfig={physicsConfig} camera={cameraConfig} spawnPosition={[0, 80, 0]} respawnThreshold={-50}>
         <World />
       </DevEnvironment>
     </XRiftProvider>
