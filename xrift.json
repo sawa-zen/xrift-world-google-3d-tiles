@@ -1,0 +1,37 @@
+{
+  "world": {
+    "distDir": "./dist",
+    "permissions": {
+      "allowedDomains": [
+        "tile.googleapis.com",
+        "maps.googleapis.com",
+        "www.gstatic.com"
+      ],
+      "allowedCodeRules": ["no-obfuscation", "no-network-without-permission"]
+    },
+    "title": "Google 3D Tiles Nagoya",
+    "description": "Google 3D Tilesで再現された名古屋・鶴舞駅周辺の街並みを歩き回れるワールド",
+    "thumbnailPath": "thumbnail.png",
+    "buildCommand": "npm run build",
+    "physics": {
+      "gravity": 1.62,
+      "allowInfiniteJump": true
+    },
+    "ignore": [
+      "**/.DS_Store",
+      "**/Thumbs.db",
+      "**/*.js.map",
+      "**/.gitkeep",
+      "**/index.html",
+      "**/__federation_shared_@react-three/drei-*.js",
+      "**/__federation_shared_@react-three/fiber-*.js",
+      "**/__federation_shared_@react-three/rapier-*.js",
+      "**/__federation_shared_@xrift/world-components-*.js",
+      "**/__federation_shared_three-*.js",
+      "**/__federation_shared_react-*.js",
+      "**/__federation_shared_react-dom-*.js",
+      "**/rapier.es-*.js",
+      "**/hls-*.js"
+    ]
+  }
+}
