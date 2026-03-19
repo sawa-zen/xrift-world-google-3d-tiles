@@ -11,7 +11,7 @@ export default defineConfig({
       insertTypesEntry: true,
     }),
     federation({
-      name: 'xrift_plateau_test',
+      name: 'xrift_google_3d_tiles_nagoya',
       filename: 'remoteEntry.js',
       exposes: {
         './World': './src/index.tsx',
@@ -24,6 +24,12 @@ export default defineConfig({
         'react-dom': {
           singleton: true,
           requiredVersion: '^19.0.0',
+        },
+        'react-dom/client': {
+          singleton: true,
+        },
+        'react/jsx-runtime': {
+          singleton: true,
         },
         three: {
           singleton: true,
