@@ -52,6 +52,6 @@
   "dependencies": {
     "@react-three/uikit": "^1.0.64",
     "@xrift/world-components": "^0.33.2",
-    "3d-tiles-renderer": "^0.4.22"
+    "3d-tiles-renderer": "^0.4.23"
   }
 }
