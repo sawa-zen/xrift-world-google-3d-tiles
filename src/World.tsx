@@ -4,6 +4,7 @@ import { Group } from 'three'
 import { RigidBody, CuboidCollider } from '@react-three/rapier'
 import { SpawnPoint, Skybox } from '@xrift/world-components'
 import { GoogleTiles } from './components/GoogleTiles'
+import { TILES_LAT, TILES_LON, FLOOR_HEIGHT } from './constants'
 
 function FollowCameraSkybox() {
   const ref = useRef<Group>(null)
@@ -31,10 +32,10 @@ export const World: React.FC<WorldProps> = ({ position = [0, 0, 0], scale = 1 })
       <SpawnPoint position={[-20, 111, 20]} yaw={180} />
       <FollowCameraSkybox />
       <ambientLight intensity={1} />
-      <RigidBody type="fixed" position={[0, 109.99, 0]}>
+      <RigidBody type="fixed" position={[0, FLOOR_HEIGHT, 0]}>
         <CuboidCollider args={[10000, 0.01, 10000]} />
       </RigidBody>
-      <GoogleTiles lat={35.1572} lon={136.9215} height={0} />
+      <GoogleTiles lat={TILES_LAT} lon={TILES_LON} />
     </group>
   )
 }

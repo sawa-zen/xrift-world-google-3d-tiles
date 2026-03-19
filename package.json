@@ -1,5 +1,5 @@
 {
-  "name": "@xrift/plateau-test",
+  "name": "@xrift/google-3d-tiles-nagoya",
   "version": "0.1.0",
   "description": "XRift world template for creating WebXR experiences with React Three Fiber and physics simulation",
   "type": "module",
